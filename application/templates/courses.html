@@ -1,0 +1,46 @@
+    {% extends "lay.html" %}
+    
+    {% block create %}
+    <h1>Course Offerings</h1>
+
+    <!--  Display the Term and Year here --->
+    <h3>Term: Spring {{ term }} </h3>
+
+    <div>
+        <table class="table table-hover">
+            <thead>
+
+            <tr>
+                <th scope="col">courseID</th>
+                <th scope="col">Title</th>
+                <th scope="col">description</th>
+                <th scope="col">credits</th>
+                <th scope="col">terms</th>
+
+            </tr>
+
+            </thead>
+            <tbody>
+             {%for data in courseData %}
+            <tr>
+                <td scope="col">{{ data["courseID"] }}</td>
+                <td scope="col">{{ data["title"] }}</td>
+                <td scope="col">{{data["description"] }}</td>
+                <td scope="col">{{ data["credits"] }}</td>
+                <td scope="col">{{ data["term"] }}</td>
+                <td>
+                    <form action =" {{url_for('enrollment')}} "method = "GET">
+                        <input type = "hidden" name ="courseID" value = "{{data['courseID']}}">
+                         <input type = "hidden" name ="title" value = "{{data['title']}}">
+                         <input type = "hidden" name ="term" value = "{{data['term']}}">
+                         <button>Enroll</button>
+                    </form>
+
+                </td>
+            </tr>
+              {%endfor%}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
