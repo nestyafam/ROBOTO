@@ -8,12 +8,23 @@
 </head>
 <body>
 
-<div class="container-fluid text-center top-container">
-    <img src="{{ url_for('static',filename='images/uta-logo-200.png')}}">
+<div class="container-fluid text-center top-container image">
+    <img class = "image" src="{{ url_for('static',filename='images/roboto10.png')}}">
 </div>
 <div class="container">
     {% include "includes/nav.html" %}
-
+     {% if session['username'] %}
+    <span class="user">Welcome, {{ session['username'] }}</span>
+    {% endif %}
+        {% with messages = get_flashed_messages(with_categories = true)%}
+            {%if messages%}
+                {% for category, messages in messages %}
+                    <div class = "alert alert-danger-{{category}}">
+                        <p>{{ messages }}</p>
+                    </div>
+                {%endfor%}
+            {%endif%}
+        {%endwith%}
     {% block content %}
     {% endblock %}
 
