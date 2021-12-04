@@ -3,21 +3,164 @@
 {% block content %}
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1>Welcome to Universal Tech Academy.</h1>
+            <h1>Welcome to Roboto Academy.</h1>
 
             {% if session['username'] %}
-                <h3>Let's get started.</h3>
+
             {% else %}
                 <p>Already registered? <a href="{{url_for('login') }}">Login</a></p>
             {% endif %}
 
-            <div style="text-align:left;">
-                <h2>What Is HTML All About?</h2>
+            <section class="hero" id="hero">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="{{ url_for('static',filename='images/roboto12.jpg')}}" class="img-fluid" alt="">
+                        </div>
+                            <div class="heroText d-flex flex-column justify-content-center">
+                                <h1 class="mt-auto mb-2">
+                                    Let's get started with:
+                                    <div class="animated-info">
+                                        <span class="animated-item">Coding</span>
+                                        <span class="animated-item">Playing</span>
+                                        <span class="animated-item">Learning</span>
+                                    </div>
+                                </h1>
+                                <p class="mb-4">Love Robots? Let's get busy!!</p>
+                                <div class="heroLinks d-flex flex-wrap align-items-center">
+                                    <p class="contact-phone mb-0"><i class="bi-phone"></i> 437-000-0000</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <p>HTML is the acronym for Hypertext Markup Language. Hypertext refers to the ability to create links to other Web pages.  Markup means it's used for creating pages of formatted text, images, and other resources embedded in the page.  HTML was created by Tim Berners-Lee in 1990.  He also invented the term "World Wide Web" and the first Web browser, and went on to found the World Wide Web Consortium, also known as the W3C. Among other things, the W3C acts as a shepherd watching over the development of Web technologies. It provides guidelines, standards, recommendations, and education on many aspects of Web-related technology. You can find out more about the W3C at www.w3c.org. </p>
+                    </div>
+            </section>
 
-                <p>Perhaps the most fundamental guideline that the W3C produces is the HTML specifications found at www.w3.org/TR/2014/PR-html5-20140916/. This document provides information on the HTML language and recommendations as to its correct usage. While these guidelines in no way prevent developers from coding any way they like, it is wise to be aware of them. As the language continues to evolve, changes could make the code obsolete in Web pages you have written. For example, the W3C guidelines indicate which HTML language elements are deprecated. Deprecated features remain in the standard, but with the understanding that they might be removed in the future. At the very least, their use is discouraged. Since many existing pages contain these deprecated elements, we'll cover them here. Review the W3C guidelines for clear documentation on this issue.</p>
-            </div>
+            <section class="section-padding" id="about">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <h2 class="mb-lg-3 mb-3">Meet Giana</h2>
+                            <p>The future where robots will be made available for most of the jobs out there is near, You have nothing to loose by learning the basic robotic skill</p>
+                        </div>
+
+                        <div class="col-lg-4 col-md-5 col-12 mx-auto">
+                            <div class="featured-circle bg-white shadow-lg d-flex justify-content-center align-items-center">
+                                <p class="featured-text"><span class="featured-number">3000</span> Projects</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="gallery">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-6 ps-0">
+                            <img src="{{ url_for('static',filename='images/roboto14.jpg')}}" class="img-fluid galleryImage" alt="get a vaccine" title="get a vaccine for yourself">
+                        </div>
+
+                        <div class="col-lg-6 col-6 pe-0">
+                            <img src="{{ url_for('static',filename='images/roboto11.jpg')}}" class="img-fluid galleryImage" alt="wear a mask" title="wear a mask to protect yourself">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-padding pb-0" id="timeline">
+                <div class="container">
+                    <div class="row">
+
+                        <h2 class="text-center mb-lg-5 mb-4">Our Timeline</h2>
+
+                        <div class="timeline">
+                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                                <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                    <h3 class=" text-light">Learn Arduino Programming </h3>
+                                    <p>
+                                        The Arduino Software (IDE) allows you to write programs and upload them to your board. In the Arduino Software page you will find two options:
+                                        If you have a reliable Internet connection, you should use the online IDE (Arduino Web Editor). It will allow you to save your sketches in the cloud, having them available from any device and backed up.
+                                    </p>
+                                </div>
+                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                    <i class="bi-patch-check-fill timeline-icon"></i>
+                                </div>
+                                <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+                                    <time>2022-01-31 </time>
+                                </div>
+                            </div>
+                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes my-lg-5 my-4">
+                                <div class="col-9 col-md-5 ms-md-4 ms-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                    <h3 class=" text-light">Learn Python</h3>
+                                    <p>Python is an interpreted high-level general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation. Its language constructs as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects<a href="https://www.google.com/search?q=free+css" target="_blank">Free CSS collection</a> website.</p>
+                                </div>
+
+                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                    <i class="bi-book timeline-icon"></i>
+                                </div>
+
+                                <div class="col-9 col-md-5 pe-md-3 pe-lg-0 order-1 order-md-3 py-4 timeline-date">
+                                    <time>2022-01-15 </time>
+                                </div>
+                            </div>
+
+                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                                <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                    <h3 class=" text-light">Learn Java</h3>
+
+                                    <p> Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+                                </div>
+
+                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                    <i class="bi-file-medical timeline-icon"></i>
+                                </div>
+
+                                <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+                                    <time>2022-02-28</time>
+                                </div>
+                            </div>
+
+                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes my-lg-5 my-4">
+                                <div class="col-9 col-md-5 ms-md-4 ms-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                    <h3 class=" text-light">Maching Learning</h3>
+                                    <p class="mb-0 pb-0">Machine learning (ML) is the study of computer algorithms that can improve automatically through experience and by the use of data. ... Machine learning algorithms build a model based on sample data, known as training data, in order to make predictions or decisions without being explicitly programmed to do so.</p>
+
+                                </div>
+
+                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                    <i class="bi-globe timeline-icon"></i>
+                                </div>
+
+                                <div class="col-9 col-md-5 pe-md-3 pe-lg-0 order-1 order-md-3 py-4 timeline-date">
+                                    <time>2022-05-30 </time>
+                                </div>
+                            </div>
+
+                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                                <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                    <h3 class=" text-light">Algorithm implementation</h3>
+
+                                    <p>Algorithm development is the act of designing the steps that solve a particular problem for a computer or any other device to follow not excluding human being, but in this case computers only and computer like devices. Algorithm development steps. </p>
+                                </div>
+
+                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                    <i class="bi-person timeline-icon"></i>
+                                </div>
+
+                                <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+                                    <time>2022-05-18 </time>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
 
         </div>
     </div>

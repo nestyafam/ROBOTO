@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>UTA - Home Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}"/>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Medic Care Bootstrap 5 CSS Template</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+        <link href="{{ url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+
+        <link href="{{ url_for('static',filename='css/bootstrap-icons.css')}}" rel="stylesheet">
+
+        <link href="{{ url_for('static',filename='css/owl.carousel.min.css')}}" rel="stylesheet">
+
+        <link href="{{ url_for('static',filename='css/owl.theme.default.min.css')}}" rel="stylesheet">
+
+        <link href="{{ url_for('static',filename='css/templatemo-medic-care.css')}}" rel="stylesheet">
 </head>
+
+
 <body>
 
 <div class="container-fluid text-center top-container image">
@@ -29,6 +55,9 @@
     {% endblock %}
 
 </div>
-    {% include "includes/footer.html" %}
+
 </body>
+
+{% include "includes/footer.html" %}
+
 </html>
