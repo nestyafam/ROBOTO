@@ -87,7 +87,7 @@ def logout ():
 @app.route("/courses/<term>")
 def courses(term=None):
     if term is None:
-        term = "Spring 2019"
+        term = "winter 2021"
     classes = Course.objects.order_by("-courseID")
     return render_template("courses.html", courseData=classes, courses=True, term=term)
 
