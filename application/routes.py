@@ -30,23 +30,23 @@ class GetAndPost(Resource):
         user.save()
         return jsonify(User.objects(user_id=data['user_id']))
 
-@api.route('/api','/<idx>')
-class GetUpdateDelete(Resource):
+#@api.route('/api','/<idx>')
+#class GetUpdateDelete(Resource):
     #To Get One
-    def get (self, idx):
-        return jsonify(User.objects(user_id = idx ))
+   # def get (self, idx):
+     #   return jsonify(User.objects(user_id = idx ))
 
         # PUT
 
-    def put(self, idx):
-        data = api.payload
-        User.objects(user_id=idx).update(**data)
-        return jsonify(User.objects(user_id=idx))
+  #  def put(self, idx):
+     #   data = api.payload
+     #   User.objects(user_id=idx).update(**data)
+      #  return jsonify(User.objects(user_id=idx))
 
         # DELETE
-        def delete(self, idx):
-            User.objects(user_id=idx).delete()
-            return jsonify("User is deleted!")
+      #  def delete(self, idx):
+        #    User.objects(user_id=idx).delete()
+         #   return jsonify("User is deleted!")
 
 
     ##########################
